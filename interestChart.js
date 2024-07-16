@@ -1,6 +1,6 @@
 async function fetchInterestData() {
     console.log("Fetching interest data...");
-    const response = await fetch('https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v2/accounting/od/interest?sort=-record_date');
+    const response = await fetch('https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v2/accounting/od/interest_on_debt?sort=-record_date&page[size]=1000');
     const data = await response.json();
     console.log("Interest data fetched:", data);
     return data.data;
